@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vadym Zdorovyk — UX/UI Product Designer</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+html{scroll-behavior:smooth}
+.pg{--ink:#262653;--mu:#555d73;--card:#f8f9ff;font-family:Inter,Arial,sans-serif;color:var(--ink);background:#fff;position:relative;overflow:clip;-webkit-font-smoothing:antialiased}
+.pg *{box-sizing:border-box}
+.pg a{color:inherit;text-decoration:none}
+.pg h1,.pg h2,.pg h3,.pg p{margin:0;font-weight:400}
+.pg h1,.pg h2,.pg .sf{font-family:'Instrument Serif',Georgia,serif}
+.pg em{font-style:italic}
+.pg .fr{margin:0 10px;border-radius:30px;position:relative;overflow:hidden}
+.pg .blue{background:linear-gradient(180deg,#4577f3 2%,#4577f2 6%,#4273ed 12.5%,#3e6ee5 23%,#3f6dde 33.5%,#416dda 40.5%,#4872dc 44%,#5079de 47.5%,#5e84e1 54.5%,#6d8fe4 61.5%,#87a3e9 68.5%,#a2b8ee 75.5%,#bfcef3 82.5%,#dae2f8 89.5%,#f6f8fd 96.5%,#fff 100%)}
+.pg .bd{display:inline-flex;align-items:center;height:44px;padding:0 20px;border-radius:999px;background:var(--ink);color:#fff;font-size:15px;font-weight:500;overflow:hidden;transition:background .35s,transform .35s,box-shadow .35s}
+.pg .bd:hover{background:#383874;transform:translateY(-2px);box-shadow:0 14px 28px -12px rgba(38,38,83,.6)}
+.pg .bd.bl{background:#eaeffb;color:var(--ink)}
+.pg .bd.bl:hover{background:#fff;box-shadow:0 14px 28px -14px rgba(38,38,83,.35)}
+.pg .rl{display:block;height:21px;line-height:21px;overflow:hidden}
+.pg .rl>span{display:block;transition:transform .5s cubic-bezier(.76,0,.24,1)}
+.pg .bd:hover .rl>span{transform:translateY(-100%)}
+.pg .nv{position:sticky;top:10px;z-index:30;width:fit-content;max-width:calc(100% - 20px);height:60px;margin:10px auto -60px;padding:8px 8px 8px 40px;display:flex;align-items:center;gap:41px;border-radius:999px;background:linear-gradient(180deg,#e3ebff,#d9e4fe);box-shadow:0 0 0 2px rgba(255,255,255,.55),0 12px 30px -14px rgba(20,40,120,.45);animation:dn .8s both}
+.pg .nv nav{display:flex;gap:41px;font-size:15px;font-weight:500}
+.pg .nv nav a{position:relative;line-height:24px}
+.pg .nv nav a:after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1.5px;background:var(--ink);transform:scaleX(0);transform-origin:right;transition:transform .4s cubic-bezier(.76,0,.24,1)}
+.pg .nv nav a:hover:after{transform:scaleX(1);transform-origin:left}
+.pg .tg{display:inline-flex;align-items:center;height:30px;padding:0 16px 0 6px;border-radius:999px;background:#fcfcff;box-shadow:0 2px 12px rgba(38,38,83,.07);font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);white-space:nowrap}
+.pg .tg i{position:relative;width:16px;height:16px;margin-right:3px;border-radius:50%;background:var(--h);animation:pu 2.4s ease-in-out infinite}
+.pg .tg i:after{content:"";position:absolute;inset:4px;border-radius:50%;background:var(--c)}
+.pg .tg.g{background:rgba(255,255,255,.4);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.9)}
+.pg .tg.w{background:rgba(255,255,255,.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,.28);color:rgba(255,255,255,.95)}
+.pg .hd{display:flex;flex-direction:column;align-items:center;text-align:center}
+.pg .hd h2{margin-top:31px;font-size:72px;line-height:72px;letter-spacing:-.02em}
+.pg .hd p{margin-top:32px;font-size:17px;line-height:26px;color:var(--mu)}
+.pg .hero{min-height:715px;padding-top:149.5px;text-align:center;color:#fff}
+.pg .hero h1{display:flex;flex-direction:column;align-items:center}
+.pg .hl{font-size:128px;line-height:128px;letter-spacing:-.03em;color:rgba(255,255,255,.2);-webkit-text-stroke:1px rgba(255,255,255,.5)}
+.pg .ht{font-size:64px;line-height:62px;letter-spacing:-.03em;color:#fff}
+.pg .hs{margin:32px auto 0;font-size:20px;line-height:26px;font-weight:300;color:rgba(255,255,255,.92)}
+.pg .hb{display:flex;justify-content:center;gap:16px;margin-top:33px}
+.pg .hero>*,.pg .hero h1>*{animation:up .9s cubic-bezier(.2,.7,.2,1) backwards}
+.pg .hero .hs{animation-delay:.24s}.pg .hero .hb{animation-delay:.36s}
+.pg #about{padding-top:127px;text-align:center}
+.pg #about h2{margin-top:33px;font-size:64px;line-height:66.56px;letter-spacing:-.02em}
+.pg #about .ap{margin-top:64px;font-size:17px;line-height:26px;color:var(--mu)}
+.pg .ph{display:block;width:160px;height:160px;margin:64px auto 0;border-radius:18px;object-fit:cover}
+.pg .cl{position:relative;z-index:2;width:min(798px,calc(100% - 48px));height:478px;margin:143px auto 0;border-radius:36px;overflow:hidden;box-shadow:0 30px 70px -30px rgba(11,23,54,.5)}
+.pg .cl img{display:block;width:100%;height:100%;object-fit:cover}
+.pg .pn{position:relative;z-index:1;margin:-303px 10px 0;padding:414px 0 121px;border-radius:30px;background:linear-gradient(180deg,#eaf3fd 0%,#fefeff 100%)}
+.pg .ac{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;width:calc(100% - 48px);max-width:1402px;margin:0 auto;text-align:left}
+.pg .ac>div{padding:48px 36px;border-radius:26px;background:linear-gradient(180deg,#fff,#fbfcff);box-shadow:0 12px 36px -26px rgba(38,38,83,.25);transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s}
+.pg .ac>div:hover{transform:translateY(-6px);box-shadow:0 28px 50px -28px rgba(38,38,83,.35)}
+.pg .ac h3,.pg .sk h3{font-size:18px;line-height:23.4px;font-weight:500;letter-spacing:-.01em}
+.pg .ac p{margin-top:12px;font-size:14.5px;line-height:22px;color:var(--mu)}
+.pg .pf{padding:113px 0 0;margin-bottom:105px;text-align:center;background:linear-gradient(180deg,#ececf3 0%,#f2f2f6 35%,#fff 100%)}
+.pg .sc{display:flex;gap:20px;overflow-x:auto;padding:8px 48px 20px;margin-top:-8px;scrollbar-width:none;text-align:left;scroll-snap-type:x proximity}
+.pg .sc::-webkit-scrollbar{display:none}
+.pg .pc{flex:0 0 585px;display:flex;flex-direction:column;background:#fff;border-radius:26px;overflow:hidden;scroll-snap-align:start;box-shadow:0 14px 40px -24px rgba(38,38,83,.28);transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s}
+.pg .pc:hover{transform:translateY(-6px);box-shadow:0 30px 56px -28px rgba(38,38,83,.4)}
+.pg .pc img{display:block;width:100%;height:358px;object-fit:cover}
+.pg .pb{padding:33px 50px 32px}
+.pg .pb>*{max-width:400px}
+.pg .pt{display:flex;gap:14px;height:16px;line-height:16px;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#6a7184}
+.pg .pc h3{margin-top:7px;font-size:26px;line-height:33.8px;font-weight:500;letter-spacing:-.02em}
+.pg .pc p{margin-top:12px;font-size:14.5px;line-height:22px;color:var(--mu)}
+.pg .pc .lk{display:inline-block;margin-top:5px;margin-right:14px;font-size:14px;line-height:20px;font-weight:500;text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:3px;transition:color .3s}
+.pg .pc .lk:hover{color:#4577f3}
+.pg .sv{padding:112px 0 95px;text-align:center;color:#fff;background:linear-gradient(180deg,#461ec9 0%,#532fcf 11%,#6041d5 21%,#7b64e0 42%,#9486eb 63%,#a198f1 73%,#b1abf4 80%,#c6c5f8 87%,#d8ddfa 94%,#e6ecfc 100%)}
+.pg .sv .hd p{color:rgba(255,255,255,.88)}
+.pg .vc{position:relative;flex:0 0 480px;height:560px;border-radius:26px;overflow:hidden;border:1px solid rgba(255,255,255,.4);box-shadow:0 24px 50px -28px rgba(40,20,120,.55);scroll-snap-align:start;transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s}
+.pg .vc:hover{transform:translateY(-6px);box-shadow:0 36px 60px -28px rgba(40,20,120,.7)}
+.pg .vc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pg .vc h3{position:relative;padding:31px 0 0 49px;font-size:26px;line-height:34px;font-weight:400;color:#fff;text-align:left;white-space:nowrap}
+.pg #reviews{padding-top:126px;text-align:center}
+.pg .mq{overflow:hidden;text-align:left}
+.pg .tr{display:flex;gap:20px;width:max-content;animation:mq 56s linear infinite}
+.pg .tr:hover{animation-play-state:paused}
+.pg .tc{display:flex;flex-direction:column;flex:0 0 440px;height:420px;padding:30px 32px 32px;border-radius:26px;background:var(--card);transition:background .4s}
+.pg .tc:hover{background:#eef1ff}
+.pg .av{width:56px;height:56px;border-radius:50%;background:repeating-linear-gradient(135deg,#e3e6f6 0 9px,#f1f3fb 9px 18px)}
+.pg .tc p{margin-top:25px;font-size:15.5px;line-height:24.8px;color:var(--ink)}
+.pg .tn{margin-top:auto}
+.pg .tn b{display:block;font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:20px;line-height:24px}
+.pg .tn span{display:block;margin-top:2px;font-size:13px;line-height:20px;color:var(--mu)}
+.pg #skills{padding-top:242px;text-align:center}
+.pg .sk{display:grid;grid-template-columns:repeat(3,1fr);gap:17px 22px;width:calc(100% - 48px);max-width:1406px;margin:0 auto;text-align:left}
+.pg .sk>div{padding:24px 22px 22px;border-radius:26px;background:var(--card);transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s}
+.pg .sk>div:hover{transform:translateY(-6px);box-shadow:0 26px 46px -30px rgba(38,38,83,.35)}
+.pg .ib{display:grid;place-items:center;width:44px;height:44px;margin-bottom:24px;border:1.25px solid var(--ink);border-radius:12px;background:#eeeff7;transition:transform .5s,background .3s}
+.pg .sk>div:hover .ib{transform:rotate(-8deg) scale(1.08);background:#fff}
+.pg .ib svg{width:20px;height:20px;fill:none;stroke:var(--ink);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.pg .ch{display:flex;flex-wrap:wrap;gap:8px;margin-top:27px}
+.pg .ch span{display:inline-block;height:32px;padding:0 12.5px;border-radius:999px;background:#edeef6;font-size:13.5px;line-height:32px;font-weight:500;transition:background .3s,color .3s,transform .3s}
+.pg .ch span:hover{background:var(--ink);color:#fff;transform:translateY(-2px)}
+.pg .ct{margin-top:225px;margin-bottom:40px;padding:122px 0 64px;text-align:center;color:#fff}
+.pg .ct h2{color:#fff}
+.pg .ct .hd p{color:rgba(255,255,255,.92)}
+.pg .cb{display:flex;justify-content:center;gap:12px;margin-top:27px}
+.pg .cp{margin-top:72px;font-size:14px;line-height:20px;color:var(--mu)}
+.pg .rv{animation:up linear backwards}
+@keyframes up{from{opacity:0;transform:translateY(36px)}to{opacity:1;transform:none}}
+@keyframes dn{from{opacity:0;transform:translateY(-30px)}to{opacity:1;transform:none}}
+@keyframes pu{50%{transform:scale(1.18)}}
+@keyframes mq{to{transform:translateX(-25%)}}
+@supports (animation-timeline:view()){.pg .rv{animation:up linear backwards;animation-timeline:view();animation-range:entry 0% entry 40%}}
+@media (max-width:1100px){.pg .d{display:none}.pg .ac,.pg .sk{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:700px){.pg .ac,.pg .sk{grid-template-columns:1fr}.pg .hl{font-size:72px;line-height:72px}.pg .ht{font-size:36px;line-height:38px}.pg .hero{padding-top:130px}.pg .hd h2,.pg #about h2{font-size:40px;line-height:42px}.pg .cl{height:auto;aspect-ratio:5/3;margin-top:80px}.pg .pn{margin-top:-120px;padding-top:200px}.pg .pc{flex-basis:300px}.pg .pb{padding:24px}.pg .vc{flex-basis:300px;height:420px}.pg .vc h3{padding-left:24px;font-size:22px}.pg .tc{flex-basis:300px}.pg #skills{padding-top:120px}.pg .ct{margin-top:120px}.pg .cb{flex-wrap:wrap}.pg .sc{padding-left:24px}}
+@media (max-width:760px){.pg .nv{gap:20px;padding-left:24px}.pg .nv nav{gap:20px;font-size:14px}}
+@media (max-width:520px){.pg .nv nav{display:none}.pg .nv{padding-left:8px}}
+@media (prefers-reduced-motion:reduce){.pg *,.pg *:before,.pg *:after{animation:none!important}}
+</style>
+</head>
+<body>
+<div class="pg" id="top">
+<header class="nv"><nav aria-label="Main"><a href="#top">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#work">Work</a><a href="#reviews">Reviews</a></nav><a class="bd" href="mailto:zdorovyk.vadym@gmail.com"><span class="rl"><span>Write to me</span><span aria-hidden="true">Write to me</span></span></a></header>
+
+<section class="hero fr blue">
+<h1><span class="hl">Hello!</span><span class="ht">I’m Vadym, <em>UX/UI Product Designer</em> in<br>SaaS, fintech, B2B, and mobile products.</span></h1>
+<p class="hs">From technical specifications, user surveys, and user<br>interaction diagrams to interface design and implementation</p>
+<div class="hb"><a class="bd" href="mailto:zdorovyk.vadym@gmail.com"><span class="rl"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span></a><a class="bd bl" href="#work"><span class="rl"><span>View my work</span><span aria-hidden="true">View my work</span></span></a></div>
+</section>
+
+<section id="about">
+<span class="tg rv"><i style="--c:#b6b0fb;--h:#ebe9fe"></i>About me</span>
+<h2 class="rv">I own the full design cycle: from requirements,<br class="d"> surveys and user flows to <em>UI design</em> and<br class="d"> developer handoff.</h2>
+<img class="ph rv" src="assets/about-photo.jpg" alt="Vadym Zdorovyk" width="160" height="160">
+<p class="ap rv">I’ve delivered products for a fintech company licensed by the<br class="d"> National Bank of Ukraine, a B2B platform for the defence ecosystem,<br class="d"> a pharmacy chain mobile app (iOS/Android) and a US startup.</p>
+<div class="cl rv"><img src="assets/about-collage2.jpg" alt="Selected product screens: mobile app, business dashboards and web interfaces" style="position: relative"></div>
+<div class="pn"><div class="ac">
+<div class="rv"><h3>Mobile apps</h3><p>iOS and Android interfaces, personal accounts and purchase flows, built on research.</p></div>
+<div class="rv"><h3>SaaS &amp; dashboards</h3><p>B2B platforms, CRM, quick-entry forms and data visualisation, built on scalable design systems.</p></div>
+<div class="rv"><h3>Websites &amp; e-commerce</h3><p>Redesign and design from scratch, with simple checkout and a focus on conversion.</p></div>
+<div class="rv"><h3>Product &amp; UX design</h3><p>Technical requirements, user surveys, user flows and information architecture that shorten the path to the goal.</p></div>
+</div></div>
+</section>
+
+<section id="work" class="pf fr">
+<div class="hd" style="margin-bottom:59px"><span class="tg g rv"><i style="--c:#ff8fd0;--h:#fbd9ee"></i>Portfolio</span><h2 class="rv">Selected <em>projects</em> that deliver results</h2><p class="rv">Products for fintech, defence, healthcare, sport and e-commerce.</p></div>
+<div class="sc" tabindex="0" aria-label="Selected projects">
+<article class="pc"><img src="assets/port-1-milzo.jpg" alt="MILZO platform interface"><div class="pb"><div class="pt"><span>B2B</span><span>SaaS</span><span>Dashboard</span></div><h3>MILZO platform for the defence ecosystem</h3><p>CRM, communications and project management. Quick-entry forms with tabs, widget pages for news, events, projects, calendar and products, and a scalable interface that’s easy to extend.</p><a class="lk" href="https://milzo.net" target="_blank" rel="noopener">milzo.net</a></div></article>
+<article class="pc"><img src="assets/port-2-fintech.jpg" alt="Fintech platform personal account"><div class="pb"><div class="pt"><span>Fintech</span><span>Web</span><span>NDA</span></div><h3>Fintech platform (PSP licensed by the NBU)</h3><p>A personal account built from technical requirements: logical navigation, a visual hierarchy that cut the time to find key functions, and questionnaires for sole proprietors and legal entities.</p></div></article>
+<article class="pc"><img src="assets/port-3-bsf.jpg" alt="BSF sports challenge platform"><div class="pb"><div class="pt"><span>Gamified</span><span>Web</span><span>US startup</span></div><h3>BSF online sports challenge platform</h3><p>A gamified interface with quick access to core features, built to engage school and university students. The startup has reached the fundraising stage.</p></div></article>
+<article class="pc"><img src="assets/port-4-anc.jpg" alt="ANC pharmacy chain mobile app screens"><div class="pb"><div class="pt"><span>Healthcare</span><span>iOS</span><span>Android</span></div><h3>ANC pharmacy chain mobile app</h3><p>A new user flow based on user surveys, plus the customer personal account and UI for both platforms.</p><a class="lk" href="#work">anc</a></div></article>
+<article class="pc"><img src="assets/port-5-websites.jpg" alt="Visodent NY, Kosher4u and Brewcode websites"><div class="pb"><div class="pt"><span>Websites</span><span>E-commerce</span></div><h3>Visodent NY, Kosher4u, Brewcode and more</h3><p>Full redesign of a New York cosmetic dentistry with a checkout in under 3 clicks. Plus Kosher4u (Europe), Brewcode GmbH / BrewSuite / BrewMemo (Germany), Fresh Home and a personal website for Beate Appel.</p><a class="lk" href="https://visodentny.com" target="_blank" rel="noopener">visodentny.com</a><a class="lk" href="https://kosher4u.eu" target="_blank" rel="noopener">kosher4u.eu</a><a class="lk" href="https://brewcode.de" target="_blank" rel="noopener">brewcode.de</a></div></article>
+</div>
+</section>
+
+<section id="services" class="sv fr">
+<div class="hd" style="margin-bottom:97px"><span class="tg w rv"><i style="--c:#e4ecff;--h:rgba(255,255,255,.28)"></i>Services</span><h2 class="rv">Design that makes complex<br class="d"> products <em>simple</em></h2><p class="rv">From the first survey to the final handoff, I take care of<br class="d"> the user experience and the interface.</p></div>
+<div class="sc" tabindex="0" aria-label="Services">
+<article class="vc"><img src="assets/serv-1-user.jpg" alt=""><h3>User-Centered<br>Design</h3></article>
+<article class="vc"><img src="assets/serv-2-conv.jpg" alt=""><h3>Conversion-Focused<br>Solutions</h3></article>
+<article class="vc"><img src="assets/serv-3-prem.jpg" alt=""><h3>Premium Visual<br>Standards</h3></article>
+<article class="vc"><img src="assets/serv-4-scal2.jpg" alt=""><h3>Scalable &amp; Consistent<br>Design Systems</h3></article>
+<article class="vc"><img src="assets/serv-5-end2.jpg" alt=""><h3>End-to-End<br>Support</h3></article>
+
+</div>
+</section>
+
+<section id="reviews">
+<div class="hd" style="margin-bottom:53px"><span class="tg rv"><i style="--c:#22b516;--h:#d4f1d0"></i>Testimonials</span><h2 class="rv">What my <em>clients</em> are saying</h2><p class="rv">Feedback from people I’ve worked with on websites and products.</p></div>
+<div class="mq"><div class="tr">
+<div class="tc"><div class="av"></div><p>I have worked with Vadim, an experienced UI/UX designer, on multiple website projects over several years. Vadim consistently delivers user-centric designs that are both visually appealing and highly functional.</p><div class="tn"><b>George Gerasymiak</b><span>Web design &amp; digital marketing</span></div></div>
+<div class="tc"><div class="av"></div><p>Working with Vadim was easy and productive. He quickly understood our needs, proposed modern and aesthetically pleasing solutions, and was always open to feedback and revisions. Vadim is detail-oriented, responsible, and creative—exactly the kind of designer you’d want to work with again. I highly recommend him!</p><div class="tn"><b>Anastasia Riabichenko</b><span>Chief Marketing Officer, Fintech</span></div></div>
+<div class="tc"><div class="av"></div><p>I have worked with Vadim, an experienced UI/UX designer, on multiple website projects over several years. Vadim consistently delivers user-centric designs that are both visually appealing and highly functional.</p><div class="tn"><b>George Gerasymiak</b><span>Web design &amp; digital marketing</span></div></div>
+<div class="tc"><div class="av"></div><p>Working with Vadim was easy and productive. He quickly understood our needs, proposed modern and aesthetically pleasing solutions, and was always open to feedback and revisions. Vadim is detail-oriented, responsible, and creative—exactly the kind of designer you’d want to work with again. I highly recommend him!</p><div class="tn"><b>Anastasia Riabichenko</b><span>Chief Marketing Officer, Fintech</span></div></div>
+<div class="tc"><div class="av"></div><p>I have worked with Vadim, an experienced UI/UX designer, on multiple website projects over several years. Vadim consistently delivers user-centric designs that are both visually appealing and highly functional.</p><div class="tn"><b>George Gerasymiak</b><span>Web design &amp; digital marketing</span></div></div>
+<div class="tc"><div class="av"></div><p>Working with Vadim was easy and productive. He quickly understood our needs, proposed modern and aesthetically pleasing solutions, and was always open to feedback and revisions. Vadim is detail-oriented, responsible, and creative—exactly the kind of designer you’d want to work with again. I highly recommend him!</p><div class="tn"><b>Anastasia Riabichenko</b><span>Chief Marketing Officer, Fintech</span></div></div>
+<div class="tc"><div class="av"></div><p>I have worked with Vadim, an experienced UI/UX designer, on multiple website projects over several years. Vadim consistently delivers user-centric designs that are both visually appealing and highly functional.</p><div class="tn"><b>George Gerasymiak</b><span>Web design &amp; digital marketing</span></div></div>
+<div class="tc"><div class="av"></div><p>Working with Vadim was easy and productive. He quickly understood our needs, proposed modern and aesthetically pleasing solutions, and was always open to feedback and revisions. Vadim is detail-oriented, responsible, and creative—exactly the kind of designer you’d want to work with again. I highly recommend him!</p><div class="tn"><b>Anastasia Riabichenko</b><span>Chief Marketing Officer, Fintech</span></div></div>
+</div></div>
+</section>
+
+<section id="skills">
+<div class="hd" style="margin-bottom:57px"><span class="tg rv"><i style="--c:#ff8a66;--h:#fde4de"></i>Skills</span><h2 class="rv">Skills and tools that set me <em>apart</em></h2><p class="rv">Research, interface design, data and the tools I use every day.</p></div>
+<div class="sk">
+<div class="rv"><div class="ib"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M8 20h8M12 16v4"></path></svg></div><h3>UI &amp; prototyping</h3><div class="ch"><span>Web, iOS, Android</span><span>Responsive interfaces</span><span>Animated prototypes</span><span>Design systems</span><span>Dashboards &amp; data viz</span></div></div>
+<div class="rv"><div class="ib"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-5-5"></path></svg></div><h3>UX research</h3><div class="ch"><span>User surveys &amp; interviews</span><span>Usability testing</span><span>Competitor analysis</span><span>User flows, CJM</span><span>Information architecture</span></div></div>
+<div class="rv"><div class="ib"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"></circle><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M17 5a3 3 0 010 6M21 20c0-2.6-1.6-4.8-4-5.7"></path></svg></div><h3>Product &amp; teamwork</h3><div class="ch"><span>Developer handoff (Figma Dev Mode)</span><span>Agile/Scrum</span><span>Working with PMs, analysts, developers</span><span>Design presentations</span></div></div>
+<div class="rv"><div class="ib"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18M7 15l4-4 3 3 5-6"></path></svg></div><h3>Data &amp; conversion</h3><div class="ch"><span>A/B testing</span><span>Google Analytics</span><span>Funnel optimisation</span><span>Reducing cognitive load</span></div></div>
+<div class="rv"><div class="ib"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l4-1 11-11-3-3L5 16l-1 4z"></path></svg></div><h3>Tools</h3><div class="ch"><span>Figma</span><span>FigJam</span><span>Miro</span><span>Webflow</span><span>Photoshop</span><span>Illustrator</span><span>Affinity Suite</span></div></div>
+<div class="rv"><div class="ib"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"></path></svg></div><h3>AI in design</h3><div class="ch"><span>Figma AI and plugins</span><span>Claude</span><span>Perplexity</span><span>GPT</span><span>Research, analysis, texts, code</span></div></div>
+</div>
+</section>
+
+<section id="contact" class="ct fr blue">
+<div class="hd"><span class="tg w rv"><i style="--c:#fff;--h:rgba(255,255,255,.3)"></i>Contact</span><h2 class="rv">Let’s make your product <em>clear</em><br class="d"> and scalable</h2><p class="rv" style="margin-top:26px">Have a project in mind? Write to me and we’ll discuss it.</p></div>
+<div class="cb"><a class="bd" href="mailto:zdorovyk.vadym@gmail.com"><span class="rl"><span>zdorovyk.vadym@gmail.com</span><span aria-hidden="true">zdorovyk.vadym@gmail.com</span></span></a><a class="bd" href="https://www.linkedin.com/in/zdorovykvadym/" target="_blank" rel="noopener"><span class="rl"><span>LinkedIn</span><span aria-hidden="true">LinkedIn</span></span></a></div>
+<p class="cp">© 2026 Vadym Zdorovyk</p>
+</section>
+</div>
+</body>
+</html>
